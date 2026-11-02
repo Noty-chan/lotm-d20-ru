@@ -31,3 +31,22 @@
   .vp-doc tr, .vp-doc blockquote, .vp-doc pre { break-inside: avoid; }
   .vp-doc a { color: #000 !important; text-decoration: none; }
 }
+
+/* Ссылки и таблицы остаются удобными на узком экране и при работе с клавиатурой. */
+.vp-doc a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.vp-doc a:focus-visible { outline: 3px solid var(--vp-c-brand-1); outline-offset: 3px; border-radius: 2px; }
+.vp-doc table { display: block; overflow-x: auto; overscroll-behavior-x: contain; }
+.vp-doc td, .vp-doc th { vertical-align: top; }
+.vp-doc h2, .vp-doc h3 { scroll-margin-top: 5.5rem; }
+@media (max-width: 639px) {
+  .vp-doc table { font-size: .93em; }
+  .vp-doc td, .vp-doc th { min-width: 9rem; }
+}
+
+@media (max-width: 639px) {
+  .reader-home .vp-doc table, .reader-home .vp-doc tbody, .reader-home .vp-doc tr, .reader-home .vp-doc td { display: block; width: 100%; }
+  .reader-home .vp-doc thead { display: none; }
+  .reader-home .vp-doc tr { border: 0; background: transparent; }
+  .reader-home .vp-doc td { min-width: 0; border: 0; padding: .35rem 0; }
+  .reader-home .vp-doc td:empty { display: none; }
+}
