@@ -13,7 +13,7 @@ export default defineConfig({
     sidebar: [
       {text:'Главы 1–9',items:chapters.map((text,i)=>({text:`${i+1}. ${text}`,link:`/book/chapter-${String(i+1).padStart(2,'0')}`}))},
       {text:'Пути',collapsed:false,items:paths.map((name,i)=>({text:`${i+1}. Путь ${name}`,link:`/book/chapter-10-${String(i+1).padStart(2,'0')}`}))},
-      {text:'Главы 11–15',items:[{text:'11. Проявление формы мифического существа',link:'/book/chapter-11'},{text:'12. Особые области',link:'/book/chapter-12'},{text:'13. Сверхъестественные существа',link:'/book/chapter-13'},{text:'14. Дневник Скрытого Мудреца',link:'/book/chapter-14'},{text:'15. Смена Последовательности',link:'/book/chapter-15'}]}
+      {text:'Главы 11–15',items:[{text:'11. Проявление формы мифического существа',link:'/book/chapter-11'},{text:'12. Особые области',link:'/book/chapter-12'},{text:'13. Сверхъестественные существа',link:'/book/chapter-13'},{text:'14. Дневник Скрытого Мудреца',link:'/book/chapter-14'},{text:'15. Смена Последовательности',link:'/book/chapter-15'},{text:'Дополнительные материалы',link:'/book/appendices'}]}
     ],
     outline: { level: [2, 3], label: 'На этой странице' },
     docFooter: { prev: 'Назад', next: 'Далее' }, returnToTopLabel: 'Наверх', sidebarMenuLabel: 'Оглавление', darkModeSwitchLabel: 'Тема'
