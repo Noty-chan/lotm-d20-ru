@@ -9,7 +9,7 @@ export default defineConfig({
   markdown: { html: false },
   themeConfig: {
     search: { provider: 'local', options: { locales: { root: { translations: { button: { buttonText: 'Поиск', buttonAriaLabel: 'Поиск по книге' }, modal: { noResultsText: 'Ничего не найдено', resetButtonTitle: 'Очистить', footer: { selectText: 'выбрать', navigateText: 'перейти', closeText: 'закрыть' } } } } } } },
-    nav: [{text:'Главная',link:'/'},{text:'Начать чтение',link:'/book/chapter-01'}],
+    nav: [{text:'Главная',link:'/'},{text:'Моё чтение',link:'/reader'},{text:'Начать чтение',link:'/book/chapter-01'}],
     sidebar: [
       {text:'Главы 1–9',items:chapters.map((text,i)=>({text:`${i+1}. ${text}`,link:`/book/chapter-${String(i+1).padStart(2,'0')}`}))},
       {text:'Пути',collapsed:false,items:paths.map((name,i)=>({text:`${i+1}. Путь ${name}`,link:`/book/chapter-10-${String(i+1).padStart(2,'0')}`}))},
