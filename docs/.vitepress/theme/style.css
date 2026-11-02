@@ -65,3 +65,15 @@
 button:focus-visible, a:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 3px; }
 @media (max-width: 640px) { .vp-doc { font-size: 17px; } .reader-tools { gap: 10px; } }
 @media print { .reader-tools { display: none !important; } }
+
+/* Компактное оглавление: прокрутка остаётся доступной колесом, жестом и клавиатурой. */
+.VPSidebar { scrollbar-width: none; -ms-overflow-style: none; }
+.VPSidebar::-webkit-scrollbar { display: none; }
+.VPSidebar .VPSidebarItem.level-0 { padding-bottom: 12px; }
+.VPSidebar .VPSidebarItem.level-0 > .item { padding: 4px 8px; margin-left: -8px; border-radius: 8px; }
+.VPSidebar .VPSidebarItem.level-0 > .item:hover { background: var(--vp-c-bg-soft); }
+.VPSidebar .VPSidebarItem.level-1 > .item { border-radius: 7px; padding: 1px 8px; margin-left: -8px; }
+.VPSidebar .VPSidebarItem.level-1 > .item:hover { background: var(--vp-c-bg-soft); }
+.VPSidebar .VPSidebarItem.level-1.is-active > .item { background: var(--vp-c-brand-soft); }
+.VPSidebar .VPSidebarItem.level-1.is-active .text { font-weight: 700; }
+.VPSidebarItem .text { line-height: 1.4; }
