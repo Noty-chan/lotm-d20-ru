@@ -1,6 +1,14 @@
 name: Publish GitHub Pages
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/pages.yml'
 permissions:
   contents: read
   pages: write
