@@ -6,8 +6,15 @@ const base = '/' + baseInput.split('/').filter(Boolean).join('/') + (baseInput.s
 export default defineConfig({
   lang: 'ru-RU', title: 'Повелитель Тайн — правила', description: 'Рабочий перевод китайской НРИ', base,
   cleanUrls: true, lastUpdated: false, ignoreDeadLinks: false,
-  markdown: { html: false },
+  markdown: {
+    html: false,
+    config(md) {
+      md.renderer.rules.table_open = () => '<div class="reader-table" role="region" aria-label="Таблица" tabindex="0"><table>\n'
+      md.renderer.rules.table_close = () => '</table></div>\n'
+    }
+  },
   themeConfig: {
+    siteTitle: 'Повелитель Тайн',
     search: { provider: 'local', options: { locales: { root: { translations: { button: { buttonText: 'Поиск', buttonAriaLabel: 'Поиск по книге' }, modal: { noResultsText: 'Ничего не найдено', resetButtonTitle: 'Очистить', footer: { selectText: 'выбрать', navigateText: 'перейти', closeText: 'закрыть' } } } } } } },
     nav: [{text:'Главная',link:'/'},{text:'Моё чтение',link:'/reader'},{text:'Начать чтение',link:'/book/chapter-01'}],
     sidebar: [
