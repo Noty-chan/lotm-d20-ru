@@ -36,7 +36,7 @@ pageClass: reader-home
 - [Бездна · Преступник](/book/chapter-10-16)
 - [Нелюдь · Заключённый](/book/chapter-10-17)
 - [Жрец Тайн](/book/chapter-10-18)
-- [Совершенный · Савант](/book/chapter-10-19)
+- [Совершенный · Эрудит](/book/chapter-10-19)
 - [Луна · Аптекарь](/book/chapter-10-20)
 - [Земля · Земледелец](/book/chapter-10-21)
 - [Судьба · Монстр](/book/chapter-10-22)
